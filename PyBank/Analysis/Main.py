@@ -21,8 +21,10 @@ with open(budget_data_csv) as budget_data_file:
         row_count += 1
         total_amt +=int(row[1])
    
-print(row_count)
-print(total_amt)
+print("Financial Analysis")
+print("-------------------------------")
+print("Total Months: " + str(row_count))
+print("Total: $" + str(total_amt))
 
 
 

@@ -14,11 +14,26 @@ with open(budget_data_csv) as budget_data_file:
 
     row_count = 0
 
+    total_amt = 0
+
     for row in budget_data_read:
 
         row_count += 1
-
+        total_amt +=int(row[1])
+   
 print(row_count)
+print(total_amt)
+
+
+
+    
+
+    
+
+
+
+
+
 
 #row_count2 = len(budget_data_csv)
 #print(row_count2)    

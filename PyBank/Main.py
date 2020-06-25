@@ -15,16 +15,13 @@ with open(budget_data_csv) as budget_data_file:
     
     #Read the csv
     budget_data_read  = csv.reader(budget_data_file, delimiter=',')
-   
     
     #Skip the header
     budget_data_header = next(budget_data_read)
 
-    #Set our 1st 2 variables to 0
+    #Set up our 1st 2 variables 
     row_count = 1
     total_amt = 0
-
-    #max_amt = max(list(budget_data_read)
 
     #Set up variables for net change (to calc avg)
     first_row = next(budget_data_read)
@@ -61,6 +58,7 @@ print("Average Change: $" + str(round(average, 2)))
 print(f"Greatest Increase in Profits: {greatest_inc[0]} (${greatest_inc[1]})")
 print(f"Greatest Decrease in Profits: {greatest_dec[0]} (${greatest_dec[1]})")
 
+#Output to txt file
 f = open('Analysis/FinancialAnalysis.txt', 'w')
 f.write("Financial Analysis\n")
 f.write("-------------------------------\n")

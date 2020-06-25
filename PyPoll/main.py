@@ -23,9 +23,11 @@ with open(election_data_csv) as election_data_file:
     li = 0
     otooley = 0
     row_count = len(election_data)
+    unique_can = set()
 
     #set up the loop & if statements...
     for row in election_data:
+        unique_can.add(row[2])
         candidate = row[2]
         if candidate == 'Khan':
             khan += 1
@@ -63,6 +65,7 @@ print(f"O'Tooley: {otooley_prcnt}00% ({otooley})")
 print("-------------------------------")
 print(f"Winner: {winner}")
 print("-------------------------------")
+#print(list(unique_can))
 
 #Output to txt file
 f = open('Analysis/ElectionResults.txt', 'w')
